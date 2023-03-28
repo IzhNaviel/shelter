@@ -28,6 +28,10 @@ $dark-3xl: #292929;
 $dark-i: #545454;
 $dark-m: #b2b2b2;
 
+/*-BREACKPOINTS-*/
+
+$tablet: 768px;
+$mobile: 375px;
 
 /*-MIXINS-*/
 
@@ -91,6 +95,10 @@ html, body {
 .wrapper {
     max-width: 1280px;
     margin: 0 auto;
+
+    @media screen and (max-width: $tablet) {
+        max-width: $tablet;
+    }
 }
 
 h1 {
@@ -99,6 +107,13 @@ h1 {
     font-size: 32px;
     line-height: 35.2px;
     letter-spacing: 0.06em;
+}
+
+h2 {
+    @include georgia($fw: 400);
+    font-style: normal;
+    font-size: 44px;
+    line-height: 130%;
 }
   
 h3 {
@@ -145,6 +160,13 @@ p {
 .header__wrapper { 
     width: 1200px;
     margin: 0 auto;
+
+    @media screen and (max-width: $tablet) {
+        width: $tablet;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
 }
 
 .head__wrapper {
@@ -156,6 +178,13 @@ p {
     align-items: center;
     padding-top: 60px;
     margin-bottom: 60px;
+
+    @media screen and (max-width: $tablet) {
+        width: 708px;
+        align-self: center;
+        padding-top: 30px;
+        margin-bottom: 60px;
+    }
 }
 
 .pets-head__wrapper {
@@ -167,6 +196,10 @@ p {
     align-items: center;
     padding-top: 30px;
     margin-bottom: 30px;
+
+    @media screen and (max-width: $tablet) {
+        width: 708px;
+    }
 }
 
 .header__logo-primary {
@@ -223,6 +256,11 @@ p {
 .start-screen {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: $tablet) {
+        flex-direction: column;
+        align-self: center;
+    }
 }
 
 .start-screen__content {
@@ -230,14 +268,19 @@ p {
     height: 322px;
     margin-top: 163px;
     margin-right: 42px;
+
+    @media screen and (max-width: $tablet) {
+        width: 460px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
 }
 
 .start-screen__content-header {
     width: 310px;
     color: $bg-color;
-    @include georgia($fw: 400);
-    font-size: 44px;
-    line-height: 57.2px;
     margin-bottom: 42px;
 }
 
@@ -251,6 +294,11 @@ p {
 
 .start-screen-img {
     width: 698px;
+
+    @media screen and (max-width: $tablet) {
+        width: 569px;
+        margin-left: 70px;
+    }
 }
 
 .start-screen__content-button {
@@ -267,6 +315,11 @@ p {
 
     &:hover,:focus,:active {
         background: $primary-light;
+    }
+
+    @media screen and (max-width: $tablet) {
+        justify-self: center;
+        align-self: center;
     }
 }
 
@@ -314,11 +367,23 @@ p {
     justify-content: center;
     align-items: center;
     margin: 80px 40px 100px;
+
+    @media screen and (max-width: $tablet) {
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
 }
 
 .about-image {
     width: 300px;
     margin-left: 175px;
+
+    @media screen and (max-width: $tablet) {
+        order: 1;
+        margin-top: 80px;
+        margin-left: 0;
+    }
 }
 
 .about__content {
@@ -327,6 +392,10 @@ p {
     margin-top: 14px;
     margin-left: 120px;
     margin-right: 175px;
+
+    @media screen and (max-width: $tablet) {
+        margin: 0;
+    }
 }
 
 .about__content-header {
@@ -359,7 +428,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 80px 0px 100px;
+    padding-top: 80px;
 }
 
 .pets-header {
@@ -367,6 +436,10 @@ p {
     height: 90px;
     text-align: center;
     margin-bottom: 60px;
+
+    @media screen and (max-width: $tablet) {
+       margin-bottom: 60px;
+    }
 }
 
 .pets-slider-wrapper {
@@ -376,6 +449,11 @@ p {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 60px;
+
+    @media screen and (max-width: $tablet) {
+        width: 708px;
+        overflow: hidden;
+    }
 }
 
 .pets-slider {
@@ -385,6 +463,12 @@ p {
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+
+    @media screen and (max-width: $tablet) {
+        width: 708px;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
 }
 
 .slider-card {
@@ -416,6 +500,10 @@ p {
 .card-img {
     width: 270px;
     margin-bottom: 30px;
+
+    &:hover, :focus, :active {
+        background: $light-s;
+    }
 }
 
 .card-button {
@@ -437,29 +525,38 @@ p {
 }
 
 .prev-button {
-    width: 60px;
+    width: 52px;
     height: 52px;
-    box-sizing: border-box;
     background: url(./img/Arrow-back.svg) no-repeat center; // Вынести в html
     border: 2px solid $primary-color;
-    border-radius: 100%;
+    border-radius: 50%;
+    padding: 19px 23px;
     margin-right: 53px;
 
     &:hover,:focus,:active {
         background: url(./img/Arrow-back.svg) no-repeat center $primary-light;
     }
+
+    @media screen and (max-width: $tablet) {
+        margin-right: 12px;
+    }
 }
 
 .next-button {
-    width: 60px;
+    width: 52px;
     height: 52px;
     background: url(./img/Arrow-forward.svg) no-repeat center; // Вынести в html
     border: 2px solid $primary-color;
-    border-radius: 100px;
+    border-radius: 50%;
+    padding: 19px 23px;
     margin-left: 53px;
 
     &:hover,:focus,:active {
         background: url(./img/Arrow-forward.svg) no-repeat center $primary-light;
+    }
+
+    @media screen and (max-width: $tablet) {
+        margin-left: 12px;
     }
 }
 
@@ -479,6 +576,10 @@ p {
     &:hover,:focus,:active {
         background: $primary-light;
     }
+
+    @media screen and (max-width: $tablet) {
+        margin-bottom: 100px;
+    }
 }
 
 /*=OUR-PETS-START=*/
@@ -489,6 +590,19 @@ p {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 60px;
+
+    @media screen and (max-width: $tablet) {
+        width: 580px;
+        margin-bottom: 40px;
+    }
+
+    .pets-slider {
+        @media screen and (max-width: $tablet) {
+            flex-wrap: wrap;
+            height: 1365px;
+            row-gap: 30px;
+        }
+    }
 }
 
 .our-pets__pagination-wrapper {
@@ -612,6 +726,12 @@ p {
     row-gap: 55px;
     column-gap: 120px;
     margin: 0 87px;
+
+    @media screen and (max-width: $tablet) {
+        width: 630px;
+        height: 449px;
+        column-gap: 60px;
+    }
 }
 
 .icons-item {
@@ -620,6 +740,10 @@ p {
 
     &:last-child {
         margin-right: 0;
+    }
+
+    @media screen and (max-width: $tablet) {
+        width: 170px;
     }
 }
 
@@ -648,10 +772,21 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: $tablet) {
+        flex-direction: column;
+    }
 }
 
 .donation-img {
     margin-right: 30px;
+
+    @media screen and (max-width: $tablet) {
+        width: 505px;
+        order: 1;
+        margin-right: 0;
+        margin-top: 60px;
+    }
 }
 
 .donation-content-header {
@@ -707,6 +842,25 @@ p {
     display: flex;
     justify-content: space-between;
     padding-top: 40px;
+
+    @media screen and (max-width: $tablet) {
+        width: 708px;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+    }
+}
+
+.footer-for-question-wrapper {
+    display: flex;
+    gap: 160px;
+
+    @media screen and (max-width: $tablet) {
+        height: 234px;
+        gap: 60px;
+        margin-top: 30px;
+        margin-bottom: 65px;
+    }
 }
 
 .footer-for-question {
@@ -715,6 +869,10 @@ p {
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 60px;
+
+    @media screen and (max-width: $tablet) {
+        margin-bottom: 0;
+    }
 }
 
 .foter-we-are-waiting {
@@ -723,12 +881,32 @@ p {
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 60px;
+
+    @media screen and (max-width: $tablet) {
+        margin-bottom: 0;
+    }
 }
 
 .h3-footer {
     letter-spacing: 0.05em;
     color: $bg-color;
     margin-top: 16px;
+
+    @media screen and (max-width: $tablet) {
+        margin-top: 0;
+    }
+}
+
+.footer-contacts {
+    @media screen and (max-width: $tablet) {
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        &:last-child {
+            margin-top: 0px;
+            margin-bottom: 0;
+        }
+    }
 }
 
 .footer-text {
@@ -747,9 +925,27 @@ p {
     margin-right: 20px;
 }
 
+.footer-adress {
+    @media screen and (max-width: $tablet) {
+        margin-top: 33px;
+        margin-bottom: 33px;
+
+        &:last-child {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
 .adress-icon {
     width: 22px;
     margin-right: 20px;
+}
+
+.footer-img {
+    @media screen and (max-width: $tablet) {
+        width: 300px;
+    }
 }
 
 /* ==== FOOTER END====*/
