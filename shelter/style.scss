@@ -199,6 +199,7 @@ p {
 }
 
 .header__logo-primary {
+    @include georgia($fw: 400);
     height: 35px;
     color: $primary-color;  
     margin-bottom: 10px;  
@@ -322,20 +323,31 @@ p {
 /* = PETS HEADER START=*/
 
 .pets-header__logo-primary {
+    @include georgia($fw: 400);
     color: $dark-i;
     margin-bottom: 10px;
 }
 
 .pets-header__logo-desc {
+    @include arial($fw: 400);
+    line-height: 15px;
+    letter-spacing: .1em;
+    font-size: 13px;
     color: $dark-3xl;
 }
 
 .pets-header__nav-item {
-    height: 27px;
+    @include arial($fw: 400);
+    font-size: 15px;
+    line-height: 160%;
     color: $dark-i;
     cursor: pointer;
 
-    &:nth-child(2),:active {
+    &:active {
+        border-bottom: 3px solid $primary-color;
+    }
+
+    &:first-child {
         color: $dark-3xl;
     }
 }
@@ -427,9 +439,8 @@ p {
 }
 
 .pets-header {
-    width: 400px;
-    height: 90px;
     text-align: center;
+    margin-bottom: 45px;
 
     @media screen and (max-width: $tablet) {
        margin-bottom: 60px;
@@ -473,6 +484,8 @@ p {
 
     &:hover {
         cursor: pointer;
+        background-color: $light-s;
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);;
     }
 
     &:hover>.card-button {
@@ -500,7 +513,6 @@ p {
 }
 
 .card-button {
-    width: 187px;
     border: 2px solid $primary-color;
     border-radius: 100px;
     @include georgia($fw: 400);
@@ -508,7 +520,7 @@ p {
     line-height: 22.1px;
     letter-spacing: 1.9px;
     color: $dark-3xl;
-    padding: 13px 0px;
+    padding: 15px 45px;
     margin-bottom: 30px;
     align-self: center;
 
@@ -576,7 +588,6 @@ p {
 /*=OUR-PETS-START=*/
 
 .our-pets-slider-wrapper {
-    width: 1200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -588,6 +599,8 @@ p {
     }
 
     .pets-slider {
+        gap: 40px 30px;
+
         @media screen and (max-width: $tablet) {
             flex-wrap: wrap;
             height: 1365px;
