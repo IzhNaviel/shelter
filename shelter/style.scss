@@ -433,17 +433,13 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 60px;
     padding-top: 80px;
     padding-bottom: 100px;
 }
 
 .pets-header {
     text-align: center;
-    margin-bottom: 45px;
-
-    @media screen and (max-width: $tablet) {
-       margin-bottom: 60px;
-    }
 }
 
 .pets-slider-wrapper {
@@ -452,7 +448,6 @@ p {
     align-items: center;
     justify-content: space-evenly;
     gap: 53px;
-    padding: 60px 0;
 
     @media screen and (max-width: $tablet) {
         flex-wrap: nowrap;
@@ -477,11 +472,11 @@ p {
 }
 
 .slider-card {
-    width: 270px;
     border-radius: 9px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 30px;
     background-color: $light-s;
 
     &:hover {
@@ -497,16 +492,14 @@ p {
 .card-header {
     @include georgia($fw: 400);
     font-size: 20px;
-    line-height: 22.1px;
-    letter-spacing: 1.9px;
+    line-height: 22.72px;
+    letter-spacing: .06em;
     color: $dark-i;
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .card-img {
     width: 270px;
-    margin-bottom: 30px;
     background: $light-s;
 
     &:hover, :focus, :active {
@@ -519,12 +512,13 @@ p {
     border-radius: 100px;
     @include georgia($fw: 400);
     font-size: 17px;
-    line-height: 22.1px;
-    letter-spacing: 1.9px;
+    line-height: 22px;
+    letter-spacing: .06em;
     color: $dark-3xl;
     padding: 15px 45px;
     margin-bottom: 30px;
     align-self: center;
+    background-color: $light-s;
 
     &:hover,:focus,:active {
         background: $primary-light;
@@ -581,10 +575,6 @@ p {
     &:hover,:focus,:active {
         background: $primary-light;
     }
-
-    @media screen and (max-width: $tablet) {
-        margin-bottom: 100px;
-    }
 }
 
 /*=OUR-PETS-START=*/
@@ -593,17 +583,16 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 60px;
 
     @media screen and (max-width: $tablet) {
-        width: 580px;
-        margin-bottom: 40px;
+        margin-top: -30px;
     }
 
     .pets-slider {
         gap: 40px 30px;
 
         @media screen and (max-width: $tablet) {
+            justify-content: space-between;
             flex-wrap: wrap;
             height: 1365px;
             row-gap: 30px;
@@ -612,8 +601,9 @@ p {
 }
 
 .our-pets__pagination-wrapper {
-    margin: 0 auto;
-    width: 340px;
+    margin: auto;
+    margin: -60px 184px 0;
+    padding-bottom: 76px;
     display: flex;
     justify-content: space-between;
 }
@@ -715,6 +705,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 60px;
     padding-top: 80px;
     padding-bottom: 100px;
 }
@@ -724,7 +715,6 @@ p {
     width: 100%;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 60px;
 }
 
 .help-icons-wrapper {
@@ -780,7 +770,6 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
 
     @media screen and (max-width: $tablet) {
         flex-direction: column;
@@ -848,6 +837,8 @@ p {
     display: flex;
     justify-content: space-between;
     padding-top: 40px;
+    margin-right: 34px;
+    margin-left: 34px;
 
     @media screen and (max-width: $tablet) {
         flex-direction: column;
@@ -860,6 +851,7 @@ p {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
     margin-bottom: 65px;
 }
 
